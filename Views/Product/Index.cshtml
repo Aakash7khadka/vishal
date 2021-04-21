@@ -1,0 +1,15 @@
+﻿@model IEnumerable<DEmos.Models.ProductVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@foreach(var obj in Model)
+{
+    <h2>@obj.Name</h2>
+    <p>@obj.price</p>
+    <a asp-action="edit" asp-route-id="@obj.id">Edit</a>
+    <a asp-action="delete" asp-route-id="@obj.id">Delete</a>
+}
+
